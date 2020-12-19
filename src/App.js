@@ -1,12 +1,20 @@
+import React from 'react';
 
+import Navigation from "./components/Navigation";
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
-      <header>
+    <React.Fragment>
 
-      </header>
-    </div>
+      <Navigation />
+      <Header />
+      <Content />
+      <Footer />
+
+    </React.Fragment>
   );
 }
 
