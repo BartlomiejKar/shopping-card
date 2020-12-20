@@ -1,3 +1,8 @@
 .nav {
     background-color: yellow;
 }
+
+.logo_container {
+    width: 20px;
+    height: 20px;
+}
