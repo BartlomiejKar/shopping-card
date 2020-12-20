@@ -16,19 +16,19 @@ const Navigation = () => {
             <div className={styles.logo_container}>
                 <img src={iconShop} alt="shopIcon" />
             </div>
-            <ul>
-                <li><Category value="Męskie" /></li>
-                <li><Category value="Damskie" /></li>
-                <li><Category value="Dziecięce" /></li>
-                <li><Category value="Sport" /></li>
+            <ul className={styles.categoryList}>
+                <li className={styles.li}><Category value="Męskie" /></li>
+                <li className={styles.li}><Category value="Damskie" /></li>
+                <li className={styles.li}><Category value="Dziecięce" /></li>
+                <li className={styles.li}><Category value="Sport" /></li>
             </ul>
-            <div>
+            <div className={styles.input}>
                 <Input />
             </div>
-            <div>
+            <div className={styles.login_container}>
                 <Login />
             </div>
-            <div>
+            <div className={styles.shoppingCart_container}>
                 <ShoppingCart />
             </div>
         </nav>

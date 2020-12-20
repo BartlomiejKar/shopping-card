@@ -7,10 +7,11 @@ import style from "../../css/nav_components/input.module.css"
 const Input = () => {
 
     return (
-        <>
+        <div className={style.input}>
             <input type="text" />
             <img className={style.icon} src={Icon} alt="search" />
-        </>
+        </div>
+
     )
 }
 
