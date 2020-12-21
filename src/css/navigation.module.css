@@ -1,34 +1,49 @@
 .nav {
-    background-color: yellow;
     display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .logo_container {
     width: 30px;
     height: 30px;
     margin:auto 10px;
+    cursor: pointer;
+    
 }
 
 .categoryList {
     display: flex;
-    margin:0;
+    margin: auto;
+    text-align: center;
 }
 
 .li {
     padding: 5px;
     list-style: none;
+    cursor: pointer;
+
 }
 
 .input {
    margin: auto 5px;
-   
+   cursor: text;
+ 
 }
+
+
+
+
 
 .login_container {
     display: flex;
     align-items: center;
+    cursor: pointer;
+  margin: auto;
 }
 
 .shoppingCart_container {
-    margin:auto
+    margin:auto;
+    cursor: pointer;
 }

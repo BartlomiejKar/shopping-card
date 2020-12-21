@@ -1,3 +1,55 @@
 .container_footer {
-    background-color: green;
+    background-color: #232323;
+    color: white;
+    text-transform: uppercase;
+}
+
+.h3_footer {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #323232;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.footer_contacts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    border-bottom: 1px solid #323232;
+}
+
+
+.contacts {
+    font-weight: 200;
+}
+
+.contacts_ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts_li {
+    margin-bottom: 15px;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+h4 {
+    color:red
+}
+.contacts_delivery {
+    color: red;
+    padding: 10px;
+    font-weight: 100;
+border-bottom: 0.2px solid red;
+
+}
+
+.footer_copyright {
+    text-align:center;
+    font-weight: 100;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
 }

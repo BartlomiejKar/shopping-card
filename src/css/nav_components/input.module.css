@@ -3,6 +3,7 @@
     height: 20px;
     padding: 2px;
     position: absolute;
+    cursor: pointer;
 }
 
 .input {
@@ -10,3 +11,6 @@
     position: relative;
     width: 100%;
 }
+
+
+
