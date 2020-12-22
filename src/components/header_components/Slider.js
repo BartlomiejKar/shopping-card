@@ -19,8 +19,8 @@ const Slider = () => {
                 <div>3/3</div>
                 <img src="" alt="" />
             </div>
-            <button>&#10094;</button>
-            <button>&#10095;</button>
+            <button className={styles.prev}>&#10094;</button>
+            <button className={styles.next}>&#10095;</button>
         </div>
 
     )
