@@ -1,6 +1,7 @@
 
 .container_slider {
     width: 80%;
+    height: 100px;
     margin: auto;
 }
 
@@ -15,3 +16,8 @@ border: none;
 user-select: none;
 background-color: transparent;
 }
+
+.none {
+    display: none;
+}
+

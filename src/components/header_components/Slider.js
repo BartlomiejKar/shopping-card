@@ -8,43 +8,40 @@ import img2 from "../../images/img2.png";
 
 import img3 from "../../images/img3.jpg"
 
+const images = [{ src: img1 }, { src: img2 }, { src: img3 }]
+
 const Slider = () => {
 
-    const images = [img1, img2, img3]
+    const [counter, setCounter] = useState(0);
+    const imagesLength = images.length - 1
 
-    const [page, setPage] = useState(1)
 
-    const nextPage = () => {
-        console.log(page)
-        setPage(page + 1)
+    const sliderImages = images.map((element, index) => {
+        return (
+            <div key={index} className={index === counter ? styles.container_slider : styles.none}>
+                <img src={element.src} alt="obraz" />
+            </div>
+        )
+    })
 
+    const nextImage = () => {
+        setCounter(counter === imagesLength ? 0 : counter + 1)
+        console.log(counter)
     }
 
-    const prevPage = () => {
-        console.log(page)
-        setPage(page - 1)
-
+    const prevImage = () => {
+        setCounter(counter === 0 ? imagesLength : counter - 1)
+        console.log(counter)
     }
+
     return (
-
-        <div className={styles.container_slider}>
-            <div>
-                <div>1/3</div>
-                <img src="" alt="" />
-            </div>
-            <div>
-                <div>2/3</div>
-                <img src="" alt="" />
-            </div>
-            <div>
-                <div>3/3</div>
-                <img src="" alt="" />
-            </div>
-            <button onClick={prevPage} className={styles.prev}>&#10094;</button>
-            <button onClick={nextPage} className={styles.next}>&#10095;</button>
-        </div>
-
+        <>
+            <button onClick={prevImage} className={styles.prev}>&#10094;</button>
+            {sliderImages}
+            <button onClick={nextImage} className={styles.next}>&#10095;</button>
+        </>
     )
 }
+
 
 export default Slider
