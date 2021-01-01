@@ -1,7 +1,11 @@
 
 .container_slider {
-    width: 80%;
-    height: 100px;
+    display: flex;
+    margin: auto 50px;
+    padding: 24px;
+}
+
+.container_image {
     margin: auto;
 }
 
@@ -9,7 +13,7 @@
 cursor: pointer;
 padding: 16px;
 font-weight: bold;
-color: white;
+color: black;
 border-radius: 0 3px 3px 0;
 transition: 0.6s ease;
 border: none;
@@ -21,3 +25,15 @@ background-color: transparent;
     display: none;
 }
 
+.image {
+   max-width: 450px;
+   max-height: 300px;
+   border-radius: 8px;
+}
+
+.button_next{
+margin: auto;
+}
+.button_prev{
+    margin: auto;
+}
