@@ -1,12 +1,17 @@
 import React from 'react';
 
-import styles from "../css/content.module.css"
+
+
+import Articles from "./Content_component/Articles"
+
+
+
 
 const Content = () => {
     return (
-        <div className={styles.container_content}>
+        <div>
             <article>
-                artukuł 1
+                <Articles />
             </article>
         </div>
     )
