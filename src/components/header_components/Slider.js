@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 import styles from "../../css/header_components/slider.module.css"
 
-import img1 from "../../images/img1.jpg";
+import img1 from "../../images/samsung/s21.jpg";
 
-import img2 from "../../images/img2.jpg";
+import img2 from "../../images/samsung/s20.jpg";
 
-import img3 from "../../images/img3.jpg"
+import img3 from "../../images/samsung/s10.jpg"
 
 const images = [{ src: img1 }, { src: img2 }, { src: img3 }]
 

@@ -1,4 +1,8 @@
 .container_header {
     background-color: #e5e5e5;
-    height: 350px;
+}
+
+.header_title {
+    text-align: center;
+    letter-spacing: 4px;
 }

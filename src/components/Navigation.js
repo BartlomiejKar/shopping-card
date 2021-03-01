@@ -11,16 +11,12 @@ import ShoppingCart from "./Nav_components/ShoppingCart"
 
 const Navigation = () => {
     return (
-
         <nav className={styles.nav}>
             <div className={styles.logo_container}>
                 <img src={iconShop} alt="shopIcon" />
             </div>
             <ul className={styles.categoryList}>
-                <li className={styles.li}><Category value="Męskie" /></li>
-                <li className={styles.li}><Category value="Damskie" /></li>
-                <li className={styles.li}><Category value="Dziecięce" /></li>
-                <li className={styles.li}><Category value="Sport" /></li>
+                <Category />
             </ul>
             <div className={styles.input}>
                 <Input />

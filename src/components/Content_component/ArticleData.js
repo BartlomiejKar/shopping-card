@@ -1,28 +1,28 @@
-import img1 from "../../images/prezenty.jpg"
-import img2 from "../../images/obuwie.jpg"
-import img3 from "../../images/gwiazdy.jpg"
-import img4 from "../../images/smoking.jpg"
+import img1 from "../../images/samsung/sluchawki.jpg"
+import img2 from "../../images/iphone/ios15.jpg"
+import img3 from "../../images/xiaomi/xiaomi11.jpg"
+import img4 from "../../images/iphone/iphone11.jpg"
 
 
 const ArticleData = [
 
     {
-        title: "Sprawdź co noszą gwiazdy",
+        title: "Recenzja nowego xiaomi 11",
         img: img3,
         button: "Zobacz więcej"
     },
     {
-        title: "Przewodnik po prezentach",
+        title: "Galaxy buds pro",
         img: img1,
         button: "Zobacz więcej"
     },
     {
-        title: "Jak dobrać idealne obuwie?",
+        title: "Co przyniesie ios 15?",
         img: img2,
         button: "Zobacz więcej"
     },
     {
-        title: "Garnitur czy smoking?",
+        title: "Iphone 11 - czy warto kupić w 2021 roku?",
         img: img4,
         button: "Zobacz więcej"
     }

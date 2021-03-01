@@ -1,10 +1,33 @@
 import React from 'react';
 
+import { BrowserRouter, Link } from "react-router-dom";
 
-const Category = ({ value }) => {
+
+import CategoryItem from "./CategoryItem";
+
+
+
+const Category = () => {
+
+    const navStyle = {
+        textDecoration: "none"
+    }
 
     return (
-        <p>{value}</p>
+        <BrowserRouter>
+            <Link style={navStyle} to="/Samsung">
+                <CategoryItem value="Samsung" />
+            </Link>
+            <Link style={navStyle} to="/Iphone">
+                <CategoryItem value="Iphone" />
+            </Link>
+            <Link style={navStyle} to="/Xiaomi">
+                <CategoryItem value="Xiaomi" />
+            </Link>
+            <Link style={navStyle} to="/Huawei">
+                <CategoryItem value="Huawei" />
+            </Link>
+        </BrowserRouter >
     )
 }
 

@@ -16,7 +16,7 @@ const Footer = () => {
                         <li className={styles.contacts_li}>Regulamin</li>
                         <li className={styles.contacts_li}>Kariera</li>
                         <li className={styles.contacts_li}>Polityka prywatności</li>
-                        <li className={styles.contacts_li}>Historia Marki</li>
+                        <li className={styles.contacts_li}>Historia sklepu</li>
                         <li className={styles.contacts_li}>Pomoc</li>
                     </ul>
                 </div>

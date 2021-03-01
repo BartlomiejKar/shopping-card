@@ -8,8 +8,8 @@ import svgIcon from "../../icons/right-arrow.svg"
 
 const Articles = () => {
 
-    const section = ArticleData.map((el, index) => {
-        const { title, img, button } = el
+    const section = ArticleData.map((element, index) => {
+        const { title, img, button } = element
         return (
             <div key={index} className={styles.single_article_container}>
                 <h3 className={styles.title}>{title}</h3>
@@ -30,4 +30,4 @@ const Articles = () => {
 }
 
 
-export default Articles
+export default Articles;
