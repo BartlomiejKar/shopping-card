@@ -1,20 +1,32 @@
 import React from 'react';
 
-// import {} from "react-router-dom"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
+import SamsungProducts from './components/ProductComponents/SamsungProducts';
+import HuaweiProducts from './components/ProductComponents/HuaweiProducts';
+import IphoneProducts from './components/ProductComponents/IphoneProducts';
+import XiaomiProducts from './components/ProductComponents/XiaomiProducts';
 
 function App() {
   return (
-    <React.Fragment>
+    <BrowserRouter basename="/">
       <Navigation />
-      <Header />
-      <Content />
+      <Switch>
+        <Route exact path="/">
+          <Header />
+          <Content />
+        </Route>
+        <Route path="/samsung" component={SamsungProducts} />
+        <Route path="/iphone" component={IphoneProducts} />
+        <Route path="/xiaomi" component={XiaomiProducts} />
+        <Route path="/huawei" component={HuaweiProducts} />
+      </Switch>
       <Footer />
-    </React.Fragment>
+    </BrowserRouter>
   );
 }
 
