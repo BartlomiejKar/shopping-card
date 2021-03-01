@@ -20,7 +20,10 @@ function App() {
           <Header />
           <Content />
         </Route>
-        <Route path="/samsung" component={SamsungProducts} />
+        <Route path="/samsung">
+          <SamsungProducts />
+        </Route>
+        {/* <Route path="/samsung" component={SamsungProducts} /> */}
         <Route path="/iphone" component={IphoneProducts} />
         <Route path="/xiaomi" component={XiaomiProducts} />
         <Route path="/huawei" component={HuaweiProducts} />

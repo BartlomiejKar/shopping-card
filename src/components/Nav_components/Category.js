@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 import CategoryItem from "./CategoryItem";
@@ -15,7 +15,7 @@ const Category = () => {
     }
 
     return (
-        <BrowserRouter>
+        <>
             <Link style={navStyle} to="/samsung">
                 <CategoryItem value="Samsung" />
             </Link>
@@ -28,7 +28,7 @@ const Category = () => {
             <Link style={navStyle} to="/huawei">
                 <CategoryItem value="Huawei" />
             </Link>
-        </BrowserRouter >
+        </>
     )
 }
 

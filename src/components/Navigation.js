@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from "react-router-dom"
+
 import styles from "../css/navigation.module.css"
 import iconShop from "../icons/shopping-logo-svgrepo-com.svg"
 
@@ -13,7 +15,9 @@ const Navigation = () => {
     return (
         <nav className={styles.nav}>
             <div className={styles.logo_container}>
-                <img src={iconShop} alt="shopIcon" />
+                <Link to="/">
+                    <img src={iconShop} alt="shopIcon" />
+                </Link>
             </div>
             <ul className={styles.categoryList}>
                 <Category />
