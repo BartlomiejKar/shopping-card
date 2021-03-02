@@ -6,9 +6,9 @@ import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
-import SamsungProducts from './components/ProductComponents/SamsungProducts';
+import SamsungProducts from './components/ProductComponents/SamsungProducts/SamsungProducts';
 import HuaweiProducts from './components/ProductComponents/HuaweiProducts';
-import IphoneProducts from './components/ProductComponents/IphoneProducts';
+import IphoneProducts from './components/ProductComponents/IphoneProducts/IphoneProducts';
 import XiaomiProducts from './components/ProductComponents/XiaomiProducts';
 
 function App() {
@@ -20,10 +20,7 @@ function App() {
           <Header />
           <Content />
         </Route>
-        <Route path="/samsung">
-          <SamsungProducts />
-        </Route>
-        {/* <Route path="/samsung" component={SamsungProducts} /> */}
+        <Route path="/samsung" component={SamsungProducts} />
         <Route path="/iphone" component={IphoneProducts} />
         <Route path="/xiaomi" component={XiaomiProducts} />
         <Route path="/huawei" component={HuaweiProducts} />
