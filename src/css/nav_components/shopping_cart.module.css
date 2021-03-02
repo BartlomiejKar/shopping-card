@@ -2,3 +2,18 @@
     width: 30px;
     height: 30px;
 }
+.em {
+    background: #e21836;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 11px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 0 0 3px;
+    left: 15px;
+    text-align: center;
+    bottom: 29px;
+    min-width: 20px;
+    width: auto;
+    font-style: normal;
+}
