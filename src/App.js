@@ -17,10 +17,10 @@ import AddCartProduct from "./components/addCartProduct/AddCartProduct"
 function App() {
   return (
     <BrowserRouter basename="/">
-      <Navigation />
-      <Switch>
-        <CounterProvider>
-          <AddCartProduct />
+      <CounterProvider>
+        <AddCartProduct />
+        <Navigation />
+        <Switch>
           <Route exact path="/">
             <Header />
             <Content />
@@ -29,9 +29,9 @@ function App() {
           <Route path="/iphone" component={IphoneProducts} />
           <Route path="/xiaomi" component={XiaomiProducts} />
           <Route path="/huawei" component={HuaweiProducts} />
-        </CounterProvider>
-      </Switch>
-      <Footer />
+        </Switch>
+        <Footer />
+      </CounterProvider>
     </BrowserRouter>
   );
 }

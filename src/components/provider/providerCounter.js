@@ -2,7 +2,6 @@
 import React, { createContext, useState } from 'react';
 
 export const ProductsContext = createContext({
-    counter: typeof Number,
     addProductToCart: () => { },
     products: []
 })
@@ -19,7 +18,6 @@ const CounterProvider = ({ children }) => {
     }
 
     return (<ProductsContext.Provider value={{
-        counter: 0,
         addProductToCart,
         products
     }}>
