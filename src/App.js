@@ -1,15 +1,16 @@
 import React from 'react';
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import CounterProvider from "./components/provider/providerCounter"
 
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import SamsungProducts from './components/ProductComponents/SamsungProducts/SamsungProducts';
-import HuaweiProducts from './components/ProductComponents/HuaweiProducts';
+import HuaweiProducts from './components/ProductComponents/HuaweiProducts/HuaweiProducts';
 import IphoneProducts from './components/ProductComponents/IphoneProducts/IphoneProducts';
-import XiaomiProducts from './components/ProductComponents/XiaomiProducts';
+import XiaomiProducts from './components/ProductComponents/XiaomiProducts/XiaomiProducts';
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
       <Navigation />
       <Switch>
         <Route exact path="/">
-          <Header />
-          <Content />
+          <CounterProvider>
+            <Header />
+            <Content />
+          </CounterProvider>
         </Route>
         <Route path="/samsung" component={SamsungProducts} />
         <Route path="/iphone" component={IphoneProducts} />
