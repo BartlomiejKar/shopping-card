@@ -12,21 +12,24 @@ import HuaweiProducts from './components/ProductComponents/HuaweiProducts/Huawei
 import IphoneProducts from './components/ProductComponents/IphoneProducts/IphoneProducts';
 import XiaomiProducts from './components/ProductComponents/XiaomiProducts/XiaomiProducts';
 
+import AddCartProduct from "./components/addCartProduct/AddCartProduct"
+
 function App() {
   return (
     <BrowserRouter basename="/">
       <Navigation />
       <Switch>
-        <Route exact path="/">
-          <CounterProvider>
+        <CounterProvider>
+          <AddCartProduct />
+          <Route exact path="/">
             <Header />
             <Content />
-          </CounterProvider>
-        </Route>
-        <Route path="/samsung" component={SamsungProducts} />
-        <Route path="/iphone" component={IphoneProducts} />
-        <Route path="/xiaomi" component={XiaomiProducts} />
-        <Route path="/huawei" component={HuaweiProducts} />
+          </Route>
+          <Route path="/samsung" component={SamsungProducts} />
+          <Route path="/iphone" component={IphoneProducts} />
+          <Route path="/xiaomi" component={XiaomiProducts} />
+          <Route path="/huawei" component={HuaweiProducts} />
+        </CounterProvider>
       </Switch>
       <Footer />
     </BrowserRouter>
