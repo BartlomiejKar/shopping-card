@@ -46,3 +46,7 @@
     padding: 20px;
    justify-content: flex-end;
 }
+
+.value {
+    align-self: center;
+}

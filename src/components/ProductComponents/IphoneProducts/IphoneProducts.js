@@ -9,9 +9,9 @@ import { ProductsCard } from '../ItemCard/ProductsCard';
 const IphoneProducts = () => {
 
     const dataIphone = iphone;
-    const products = dataIphone.map(({ id, img, description, name }) => {
+    const products = dataIphone.map(({ id, img, description, name, value }) => {
         return (
-            <ItemCard key={id} id={id} img={img} description={description} name={name} />
+            <ItemCard key={id} id={id} img={img} description={description} name={name} value={value} />
         )
     });
 

@@ -10,14 +10,14 @@ const style = {
 
 
 const AddCartProduct = () => {
-    const { products, deleteProduct } = useContext(ProductsContext);
-    const arrayItems = products.map(({ name, img }) => {
+    const { products, deleteProduct, counter } = useContext(ProductsContext);
+    const arrayItems = products.map(({ name, img, value }) => {
         return (
-
             <div className={styles.container} key={name}>
                 <p className={styles.name} >{name}</p>
                 <img className={styles.image} src={img} alt="product" />
-                <button onClick={() => deleteProduct(name)} className={styles.button}>Remove product</button>
+                <button onClick={() => deleteProduct(name, value)} className={styles.button}>Remove product</button>
+                <h4 className={styles.value}>{value + "$"}</h4>
             </div>
         )
 
@@ -30,7 +30,7 @@ const AddCartProduct = () => {
                 {arrayItems.length > 0 ? arrayItems : emptyCart}
             </div>
             <div className={styles.totalPrice}>
-                <h3>Value:0</h3>
+                <h3>Value: {counter + "$"}  </h3>
             </div>
         </>
     )
