@@ -18,7 +18,6 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <CounterProvider>
-        <AddCartProduct />
         <Navigation />
         <Switch>
           <Route exact path="/">
@@ -29,6 +28,7 @@ function App() {
           <Route path="/iphone" component={IphoneProducts} />
           <Route path="/xiaomi" component={XiaomiProducts} />
           <Route path="/huawei" component={HuaweiProducts} />
+          <Route path="/cart" component={AddCartProduct} />
         </Switch>
         <Footer />
       </CounterProvider>
