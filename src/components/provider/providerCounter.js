@@ -3,7 +3,8 @@ import React, { createContext, useState } from 'react';
 
 export const ProductsContext = createContext({
     addProductToCart: () => { },
-    products: []
+    products: [],
+    deleteProduct: () => { },
 })
 
 
@@ -17,9 +18,14 @@ const CounterProvider = ({ children }) => {
         setProducts([{ name, img }, ...products]);
     }
 
+    const deleteProduct = (name) => {
+        const deleteItems = products.filter((element) => element.name !== name)
+        setProducts(deleteItems)
+    }
     return (<ProductsContext.Provider value={{
         addProductToCart,
-        products
+        products,
+        deleteProduct,
     }}>
         {children}
     </ProductsContext.Provider>
