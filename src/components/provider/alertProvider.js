@@ -1,6 +1,7 @@
 
 import { store } from "react-notifications-component";
-import 'react-notifications-component/dist/theme.css'
+import 'react-notifications-component/dist/theme.css';
+import "animate.css"
 
 export const alertProvider = (name) => {
     store.addNotification({
