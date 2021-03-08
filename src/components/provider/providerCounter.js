@@ -1,5 +1,6 @@
 
 import React, { createContext, useState } from 'react';
+import { alertProvider } from "./alertProvider"
 
 export const ProductsContext = createContext({
     counter: 0,
@@ -18,6 +19,7 @@ const CounterProvider = ({ children }) => {
     const addProductToCart = (name, img, value) => {
         setProducts([{ name, img, value }, ...products]);
         counterValue(value)
+        alertProvider(name)
     }
     const counterValue = (value) => {
         setCounter(prevValue => prevValue + value)

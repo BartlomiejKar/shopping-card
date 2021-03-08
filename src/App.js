@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import CounterProvider from "./components/provider/providerCounter"
+import CounterProvider from "./components/provider/providerCounter";
+import ReactNotification from 'react-notifications-component';
 
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
@@ -18,6 +19,7 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <CounterProvider>
+        <ReactNotification />
         <Navigation />
         <Switch>
           <Route exact path="/">
