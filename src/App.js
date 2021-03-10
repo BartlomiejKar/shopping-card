@@ -8,12 +8,14 @@ import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
+import { LoginForm } from "./components/loginForm/LoginForm"
 import SamsungProducts from './components/ProductComponents/SamsungProducts/SamsungProducts';
 import HuaweiProducts from './components/ProductComponents/HuaweiProducts/HuaweiProducts';
 import IphoneProducts from './components/ProductComponents/IphoneProducts/IphoneProducts';
 import XiaomiProducts from './components/ProductComponents/XiaomiProducts/XiaomiProducts';
 
 import AddCartProduct from "./components/addCartProduct/AddCartProduct"
+
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
           <Route path="/xiaomi" component={XiaomiProducts} />
           <Route path="/huawei" component={HuaweiProducts} />
           <Route path="/cart" component={AddCartProduct} />
+          <Route path="/login" component={LoginForm} />
         </Switch>
         <Footer />
       </CounterProvider>

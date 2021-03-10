@@ -5,7 +5,7 @@ import "animate.css"
 
 export const alertProvider = (name) => {
     store.addNotification({
-        title: "Add product",
+        title: "Dodano do koszyka",
         message: `${name}`,
         type: "info",
         insert: "bottom",

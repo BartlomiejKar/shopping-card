@@ -16,21 +16,21 @@ const AddCartProduct = () => {
             <div className={styles.container} key={name}>
                 <p className={styles.name} >{name}</p>
                 <img className={styles.image} src={img} alt="product" />
-                <button onClick={() => deleteProduct(name, value)} className={styles.button}>Remove product</button>
-                <h4 className={styles.value}>{value + "$"}</h4>
+                <button onClick={() => deleteProduct(name, value)} className={styles.button}>Usuń produkt</button>
+                <h4 className={styles.value}>{value + " PLN"}</h4>
             </div>
         )
 
     })
 
-    const emptyCart = <div style={style}><h2>Your cart is empty</h2></div>
+    const emptyCart = <div style={style}><h2>Twój koszyk jest pusty</h2></div>
     return (
         <>
             <div>
                 {arrayItems.length > 0 ? arrayItems : emptyCart}
             </div>
             <div className={styles.totalPrice}>
-                <h3>Value: {counter + "$"}  </h3>
+                <h3>Wartość: {counter + " PLN"}  </h3>
             </div>
         </>
     )

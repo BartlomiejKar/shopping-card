@@ -11,7 +11,7 @@ export const ItemCard = ({ name, description, id, img, value }) => {
             <p>{description}</p>
             <img className={styles.image} src={img} alt={name} />
             <button onClick={() => addProductToCart(name, img, value)} className={styles.addCardButton}>Dodaj do koszyka</button>
-            <h4>{value + "$"}</h4>
+            <h4>{value + " PLN"}</h4>
         </div>
     )
 }
