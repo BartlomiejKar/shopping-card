@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
+import { LoginForm } from '../loginForm/LoginForm'
 
 import Icon from "../../icons/enter.svg"
 
@@ -11,12 +13,12 @@ const Login = () => {
         color: "black"
     }
     return (
-        <>
+        <div className={style.login_container}>
             <Link style={navStyle} to="/login">
-                <p>Zaloguj/Zarejestruj</p>
+                <LoginForm />
             </Link>
             <img className={style.icon} src={Icon} alt="login" />
-        </>
+        </div>
     )
 }
 
