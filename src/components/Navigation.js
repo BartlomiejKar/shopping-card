@@ -25,9 +25,7 @@ const Navigation = () => {
             <div className={styles.input}>
                 <Input />
             </div>
-            <div className={styles.login_container}>
-                <Login />
-            </div>
+            <Login />
             <div className={styles.shoppingCart_container}>
                 <ShoppingCart />
             </div>

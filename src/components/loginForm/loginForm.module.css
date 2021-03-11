@@ -1,0 +1,25 @@
+.loginContainerButton {
+    border:none;
+    cursor: pointer;
+    background-color: transparent;
+    color:black;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.container {
+    margin: 0;
+    padding: 15px;
+}
+
+.logoutContainerButton {
+border:none;
+cursor: pointer;
+background-color: transparent;
+color:black;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 2px;
+}
+

@@ -10,7 +10,7 @@ const style = {
 
 
 const AddCartProduct = () => {
-    const { products, deleteProduct, counter } = useContext(ProductsContext);
+    const { products, deleteProduct, counter, isAuthenticated } = useContext(ProductsContext);
     const arrayItems = products.map(({ name, img, value }) => {
         return (
             <div className={styles.container} key={name}>
@@ -22,8 +22,9 @@ const AddCartProduct = () => {
         )
 
     })
-
-    const emptyCart = <div style={style}><h2>Twój koszyk jest pusty</h2></div>
+    const checkLoginUser = <div style={style}><h2>Zaloguj się by móc dodać przedmioty do koszyka</h2></div>
+    const userIsLogged = <div style={style}><h2>Twój koszyk jest pusty</h2></div>
+    const emptyCart = isAuthenticated ? userIsLogged : checkLoginUser
     return (
         <>
             <div>

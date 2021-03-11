@@ -1,19 +1,25 @@
 
 import React, { createContext, useState } from 'react';
-import { alertProvider } from "./alertProvider"
+import { alertProvider } from "./alertProvider";
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 
 export const ProductsContext = createContext({
     counter: 0,
     addProductToCart: () => { },
     products: [],
     deleteProduct: () => { },
+    isAuthenticated: ""
 })
 
 
 
 const CounterProvider = ({ children }) => {
+    const { isAuthenticated } = useAuth0();
     const [products, setProducts] = useState([]);
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(0);
+
 
 
     const addProductToCart = (name, img, value) => {
@@ -37,6 +43,7 @@ const CounterProvider = ({ children }) => {
         addProductToCart,
         products,
         deleteProduct,
+        isAuthenticated: isAuthenticated
     }}>
         {children}
     </ProductsContext.Provider>
