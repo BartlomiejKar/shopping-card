@@ -15,6 +15,7 @@ import HuaweiProducts from './components/ProductComponents/HuaweiProducts/Huawei
 import IphoneProducts from './components/ProductComponents/IphoneProducts/IphoneProducts';
 import XiaomiProducts from './components/ProductComponents/XiaomiProducts/XiaomiProducts';
 import AddCartProduct from "./components/addCartProduct/AddCartProduct"
+import { OrderForm } from './components/OrderForm/OrderForm';
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/xiaomi" component={XiaomiProducts} />
           <Route path="/huawei" component={HuaweiProducts} />
           <Route path="/cart" component={AddCartProduct} />
+          <Route path="/form" component={OrderForm} />
         </Switch>
         <Footer />
       </CounterProvider>

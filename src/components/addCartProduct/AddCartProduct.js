@@ -1,6 +1,8 @@
 
 import React, { useContext } from 'react';
-import styles from "./AddCartProduct.module.css"
+import styles from "./AddCartProduct.module.css";
+import { Link } from "react-router-dom";
+
 
 import { ProductsContext } from "../provider/providerCounter"
 
@@ -24,11 +26,16 @@ const AddCartProduct = () => {
     })
     const checkLoginUser = <div style={style}><h2>Zaloguj się by móc dodać przedmioty do koszyka</h2></div>
     const userIsLogged = <div style={style}><h2>Twój koszyk jest pusty</h2></div>
-    const emptyCart = isAuthenticated ? userIsLogged : checkLoginUser
+    const emptyCart = isAuthenticated ? userIsLogged : checkLoginUser;
+    // const formButton = <button className={styles.formButton}>Wypełnij formularz do zamówienia</button>;
+    const formButton = <Link to="/form" className={styles.formButton}>Wypełnij formularz do zamówienia</Link>;
     return (
         <>
             <div>
                 {arrayItems.length > 0 ? arrayItems : emptyCart}
+            </div>
+            <div className={styles.containerFormButton}>
+                {arrayItems.length > 0 ? formButton : false}
             </div>
             <div className={styles.totalPrice}>
                 <h3>Wartość: {counter + " PLN"}  </h3>
