@@ -1,8 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { ProductsContext } from '../provider/providerCounter';
-import axios from "../../axios"
+import axios from "../../axios";
+
+import { Spinner } from "../Spinner/Spinner"
 
 import styles from "./OrderForm.module.css";
+import { FormIsSent } from './FormIsSent';
 
 const initialForm = {
     name: "",
@@ -13,11 +16,9 @@ const initialForm = {
 export const OrderForm = () => {
     const { counter } = useContext(ProductsContext);
 
-    // const [name, setName] = useState("");
-    // const [surname, setSurname] = useState("");
-    // const [adress, setAdress] = useState("");
-    // const [message, setMessage] = useState("");
-    const [formValues, setFormValues] = useState(initialForm)
+    const [formValues, setFormValues] = useState(initialForm);
+    const [isLoading, setIsLoading] = useState(false);
+    const [afterSendForm, setAfterSendForm] = useState(false)
     const handleInputChange = (e) => {
         setFormValues({
             ...formValues,
@@ -27,20 +28,26 @@ export const OrderForm = () => {
     }
 
     const handleSubmit = (e) => {
+        setIsLoading(true)
         e.preventDefault();
         const order = {
             name: formValues.name,
             surname: formValues.surname,
             adress: formValues.adress,
-            message: formValues.message
+            message: formValues.message,
+            value: counter
         }
         axios.post("/form.json", order)
-            .then(response => console.log(response))
+            .then(response => {
+                setIsLoading(false);
+                setAfterSendForm(true);
+            }
+            )
             .catch(err => console.log(err))
         setFormValues(initialForm)
     }
 
-    return (
+    const form = (
         <form onSubmit={handleSubmit}>
             <div className={styles.formContainer}>
                 <h4>{counter} PLN</h4>
@@ -60,8 +67,18 @@ export const OrderForm = () => {
                     <label>Wiadomość dla sprzedawcy</label>
                     <textarea placeholder="Wpisz wiadomość" name="message" value={formValues.message} onChange={handleInputChange} />
                 </div>
-                <button type="submit">Wyślij</button>
+                <button type="submit">Przejdź do płatności</button>
             </div>
         </form>
+    )
+    const Loaded = isLoading ? <Spinner /> : form
+    const FormSend = !afterSendForm ? Loaded : <FormIsSent />
+
+    return (
+        <>
+            {/* {isLoading ? <Spinner /> : form}
+            {afterSendForm ? <FormIsSent /> : null} */}
+            {FormSend}
+        </>
     )
 }

@@ -4,8 +4,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CounterProvider from "./components/provider/providerCounter";
 import ReactNotification from 'react-notifications-component';
 
-
-
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Content from "./components/Content";
@@ -16,6 +14,7 @@ import IphoneProducts from './components/ProductComponents/IphoneProducts/Iphone
 import XiaomiProducts from './components/ProductComponents/XiaomiProducts/XiaomiProducts';
 import AddCartProduct from "./components/addCartProduct/AddCartProduct"
 import { OrderForm } from './components/OrderForm/OrderForm';
+import { SingleArticle } from "./components/Content_component/SingleArticle";
 
 
 
@@ -36,6 +35,7 @@ function App() {
           <Route path="/huawei" component={HuaweiProducts} />
           <Route path="/cart" component={AddCartProduct} />
           <Route path="/form" component={OrderForm} />
+          <Route path="/articles" component={SingleArticle} />
         </Switch>
         <Footer />
       </CounterProvider>

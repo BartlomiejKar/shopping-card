@@ -6,7 +6,6 @@ import styles from "../css/navigation.module.css"
 import iconShop from "../icons/shopping-logo-svgrepo-com.svg"
 
 import Category from "./Nav_components/Category"
-import Input from "./Nav_components/Input"
 import Login from "./Nav_components/Login"
 import ShoppingCart from "./Nav_components/ShoppingCart"
 
@@ -22,9 +21,6 @@ const Navigation = () => {
             <ul className={styles.categoryList}>
                 <Category />
             </ul>
-            <div className={styles.input}>
-                <Input />
-            </div>
             <Login />
             <div className={styles.shoppingCart_container}>
                 <ShoppingCart />

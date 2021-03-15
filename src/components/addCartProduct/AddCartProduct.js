@@ -27,7 +27,6 @@ const AddCartProduct = () => {
     const checkLoginUser = <div style={style}><h2>Zaloguj się by móc dodać przedmioty do koszyka</h2></div>
     const userIsLogged = <div style={style}><h2>Twój koszyk jest pusty</h2></div>
     const emptyCart = isAuthenticated ? userIsLogged : checkLoginUser;
-    // const formButton = <button className={styles.formButton}>Wypełnij formularz do zamówienia</button>;
     const formButton = <Link to="/form" className={styles.formButton}>Wypełnij formularz do zamówienia</Link>;
     return (
         <>
