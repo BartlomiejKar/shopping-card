@@ -76,8 +76,6 @@ export const OrderForm = () => {
 
     return (
         <>
-            {/* {isLoading ? <Spinner /> : form}
-            {afterSendForm ? <FormIsSent /> : null} */}
             {FormSend}
         </>
     )

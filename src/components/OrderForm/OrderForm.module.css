@@ -1,29 +1,50 @@
 form {
 box-shadow: 1px -3px 12px -2px rgba(0,0,0,0.62);
-margin: 20px
+margin: 20px;
+display: flex;
 }
 h4{
     text-align: center;
 }
 
 .formContainer {
-    padding: 20px;
-   
+  margin:auto;
 }
 
 label {
-    padding: 20px;
+ display: none;
 
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
+   height: 10vh;
+   margin: 20px;
+   width: 400px;
 }
-input {
-   max-width: 200px;
+input, textarea {
+height: 50px;
+width: 100%;
+transition-duration: 0.4s;
+}
+input:focus, textarea:focus {
+    background-color: #f9f8f8;
+    height: 12vh;
 }
 
+
 button {
-   
+   justify-items: flex-end;
+}
+
+.sendContainer {
+margin-top: 20px;
+  margin:auto;
+  text-align: center;
+  min-height: 20vh;
+}
+.sendContainer::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+  background-color: black;
 }

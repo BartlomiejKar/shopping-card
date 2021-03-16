@@ -44,6 +44,7 @@
     cursor: pointer;
    text-decoration: none;
    transition-duration: 0.4s;
+   margin-top: 20px;
 }
 .linkToBack:hover {
 background-color:#e7e7e7;
