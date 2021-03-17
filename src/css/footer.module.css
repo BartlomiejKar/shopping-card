@@ -53,3 +53,9 @@ border-bottom: 0.2px solid red;
     letter-spacing: 0.8px;
     text-transform: uppercase;
 }
+
+@media(max-width:680px) {
+   h3 {
+       text-align: center;
+   }
+}

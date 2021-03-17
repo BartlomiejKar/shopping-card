@@ -80,3 +80,13 @@
     position:relative;
 	top:1px;
 }
+@media (max-width:680px) {
+  .image {
+	  width: 50px;
+	  height: 100px;
+  }
+  .button {
+	  margin: 8px;
+	  font-size: 10px;
+  }
+}

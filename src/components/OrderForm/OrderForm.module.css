@@ -32,7 +32,7 @@ input:focus, textarea:focus {
 }
 
 
-button {
+.buttonSubmit {
    justify-items: flex-end;
 }
 
@@ -47,4 +47,16 @@ margin-top: 20px;
     width: 100%;
     height: 1px;
   background-color: black;
+}
+
+@media (max-width:680px) {
+  .formContainer {
+    max-width: 100%;
+  }
+  .container {
+    width: auto;
+  }
+  .buttonSubmit {
+ margin-left: 30%;
+  }
 }

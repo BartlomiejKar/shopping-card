@@ -24,14 +24,14 @@ const Slider = () => {
         )
     })
 
+
     const nextImage = () => {
-        setCounter(counter === imagesLength ? 0 : counter + 1)
+        setCounter(counter === imagesLength ? 0 : counter + 1);
     }
 
     const prevImage = () => {
         setCounter(counter === 0 ? imagesLength : counter - 1)
     }
-
     return (
         <div className={styles.container_slider}>
             <div className={styles.button_prev}>

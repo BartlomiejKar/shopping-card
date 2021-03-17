@@ -67,7 +67,7 @@ export const OrderForm = () => {
                     <label>Wiadomość dla sprzedawcy</label>
                     <textarea placeholder="Wpisz wiadomość" name="message" value={formValues.message} onChange={handleInputChange} />
                 </div>
-                <button type="submit">Przejdź do płatności</button>
+                <button className={styles.buttonSubmit} type="submit">Przejdź do płatności</button>
             </div>
         </form>
     )
