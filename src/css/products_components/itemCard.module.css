@@ -36,3 +36,12 @@ margin-bottom: 25px;
     width: 150px;
     cursor: pointer;
 }
+
+@media (max-width:680px) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
+    .addCardButton {
+        margin: 20px auto;
+    }
+}
