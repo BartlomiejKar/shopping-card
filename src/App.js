@@ -15,7 +15,7 @@ import XiaomiProducts from './components/ProductComponents/XiaomiProducts/Xiaomi
 import AddCartProduct from "./components/addCartProduct/AddCartProduct"
 import { OrderForm } from './components/OrderForm/OrderForm';
 import { SingleArticle } from "./components/Content_component/SingleArticle";
-import ScrollTop from "./ScrollTop"
+import ScrollToTop from "./ScrollTop"
 
 
 
@@ -39,7 +39,7 @@ function App() {
           <Route path="/form" component={OrderForm} />
         </Switch>
         <Footer />
-        <ScrollTop />
+        <ScrollToTop />
       </CounterProvider>
     </BrowserRouter>
   );

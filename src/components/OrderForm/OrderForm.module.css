@@ -33,7 +33,8 @@ input:focus, textarea:focus {
 
 
 .buttonSubmit {
-   justify-items: flex-end;
+   padding: 5px;
+   margin-bottom: 20px;
 }
 
 .sendContainer {
