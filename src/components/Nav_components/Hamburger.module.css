@@ -8,7 +8,6 @@
     background: transparent;
     position: relative;
     transition: 2s ease-in-out;
-    /* transition: 0.3s transform linear; */
   }
   
   .categoryListMobile::before, 
@@ -23,19 +22,10 @@
   }
   
   .categoryListMobile::after {
-    transform: translateY(25px);
-    /* transition: 0.3s transform linear; */
+    transform: translateY(25px);    
   }
   
-  /* .categoryListMobile:focus {
-    transform: rotate(45deg) translateY(5px);
-    border: none;
-  } */
-  
-  /* .categoryListMobile:focus::after {
-    transform: rotate(-90deg) translateX(-10px);
-  }
-   */
+
 .hamburgerMenu {
 text-align: center;
 background-color: white;
