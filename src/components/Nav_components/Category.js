@@ -7,7 +7,7 @@ import CategoryItem from "./CategoryItem";
 
 
 
-const Category = () => {
+const Category = ({ onClick }) => {
 
     const navStyle = {
         textDecoration: "none",
@@ -16,16 +16,16 @@ const Category = () => {
 
     return (
         <>
-            <Link style={navStyle} to="/samsung">
+            <Link onClick={onClick} style={navStyle} to="/samsung">
                 <CategoryItem value="Samsung" />
             </Link>
-            <Link style={navStyle} to="/iphone">
+            <Link onClick={onClick} style={navStyle} to="/iphone">
                 <CategoryItem value="Iphone" />
             </Link>
-            <Link style={navStyle} to="/xiaomi">
+            <Link onClick={onClick} style={navStyle} to="/xiaomi">
                 <CategoryItem value="Xiaomi" />
             </Link>
-            <Link style={navStyle} to="/huawei">
+            <Link onClick={onClick} style={navStyle} to="/huawei">
                 <CategoryItem value="Huawei" />
             </Link>
         </>

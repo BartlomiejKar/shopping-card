@@ -1,0 +1,52 @@
+.categoryListMobile {
+    margin: 10px; 
+    cursor: pointer;
+    width: 40px;
+    height: 35px;
+    border: 0;
+    border-top: 5px solid black;
+    background: transparent;
+    position: relative;
+    transition: 2s ease-in-out;
+    /* transition: 0.3s transform linear; */
+  }
+  
+  .categoryListMobile::before, 
+  .categoryListMobile::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid black;
+    transform: translateY(10px);
+  }
+  
+  .categoryListMobile::after {
+    transform: translateY(25px);
+    /* transition: 0.3s transform linear; */
+  }
+  
+  /* .categoryListMobile:focus {
+    transform: rotate(45deg) translateY(5px);
+    border: none;
+  } */
+  
+  /* .categoryListMobile:focus::after {
+    transform: rotate(-90deg) translateX(-10px);
+  }
+   */
+.hamburgerMenu {
+text-align: center;
+background-color: white;
+height: 100vh;
+z-index: 10;
+
+}
+
+
+.hamburgerMenuNone {
+display: none;
+}
+
+

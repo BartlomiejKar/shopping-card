@@ -1,3 +1,7 @@
+.mobileMenu {
+  display: none;
+}
+
 .nav {
     display: flex;
     text-transform: uppercase;
@@ -27,11 +31,6 @@
 .li:hover {
     border-bottom: 1px solid black;
 }
-.input {
-   margin: auto 5px;
-   cursor: text;
- 
-}
 
 .login_container {
     display: flex;
@@ -49,42 +48,18 @@
     border-bottom: 1px solid black;
 }
 
-@media (max-width:680px) {
 
-    .categoryListMobile {
-        margin: auto;
-        cursor: pointer;
-        width: 40px;
-        height: 35px;
-        border: 0;
-        border-top: 5px solid black;
-        background: transparent;
-        position: relative;
-        transition: 0.3s transform linear;
-      }
-      
-      .categoryListMobile::before, .categoryListMobile::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        border-top: 5px solid black;
-        transform: translateY(10px);
-      }
-      
-      .categoryListMobile::after {
-        transform: translateY(25px);
-        transition: 0.3s transform linear;
-      }
-      
-      .categoryListMobile:focus {
-        transform: rotate(45deg) translateY(5px);
-        border: none;
-      }
-      
-      .categoryListMobile:focus::after {
-        transform: rotate(-90deg) translateX(-10px);
-      }
-      
+@media(max-width: 680px) {
+  .categoryList {
+    display: none;
+  }
+  .mobileMenu {
+ display: flex;
+ flex-direction: column;
+  }
+  .li {
+font-size: 50px;
+text-align: center;
+padding: 20px;
+  }
 }
