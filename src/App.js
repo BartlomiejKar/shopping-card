@@ -15,6 +15,7 @@ import XiaomiProducts from './components/ProductComponents/XiaomiProducts/Xiaomi
 import AddCartProduct from "./components/addCartProduct/AddCartProduct"
 import { OrderForm } from './components/OrderForm/OrderForm';
 import { SingleArticle } from "./components/Content_component/SingleArticle";
+import ScrollTop from "./ScrollTop"
 
 
 
@@ -29,15 +30,16 @@ function App() {
             <Header />
             <Content />
           </Route>
+          <Route path="/articles" component={SingleArticle} />
           <Route path="/samsung" component={SamsungProducts} />
           <Route path="/iphone" component={IphoneProducts} />
           <Route path="/xiaomi" component={XiaomiProducts} />
           <Route path="/huawei" component={HuaweiProducts} />
           <Route path="/cart" component={AddCartProduct} />
           <Route path="/form" component={OrderForm} />
-          <Route path="/articles" component={SingleArticle} />
         </Switch>
         <Footer />
+        <ScrollTop />
       </CounterProvider>
     </BrowserRouter>
   );
