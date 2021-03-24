@@ -22,6 +22,6 @@ Technologies I used:
 * JavaScript (ES6+)
 * Git 
 
-Online store where you can buy mobile phones from brands such as iphone itd. If you want to add any product to your cart you must be logged. You can also remove products from your cart. What is more, there is a section with news and articles from the mobile world. Complete order form is send to the firebase.
+Online store where you can buy mobile phones from brands such as iphone, samsung etc. If you want to add any product to your cart you must be logged. You can also remove products from your cart. What is more, there is a section with news and articles from the mobile world. Complete order form is send to the firebase.
 
 ## [DEMO](https://goofy-austin-10a7f9.netlify.app/)
